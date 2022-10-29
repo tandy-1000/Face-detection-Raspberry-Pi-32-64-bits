@@ -1,3 +1,11 @@
+```
+g++ -Wall -fexceptions -pthread -O3 -I/usr/include/opencv4 -I/usr/local/include/MNN -c /home/tandy/Face-detection-Raspberry-Pi-32-64-bits/MNN/main.cpp -o obj/Release/main.o
+
+g++ -Wall -fexceptions -pthread -O3 -I/usr/include/opencv4 -I/usr/local/include/MNN -c /home/tandy/Face-detection-Raspberry-Pi-32-64-bits/MNN/MNN_UltraFace.cpp -o obj/Release/MNN_UltraFace.o
+
+g++ -L/usr/local/lib/ -o bin/Release/FaceDetection obj/Release/main.o obj/Release/MNN_UltraFace.o  -I/usr/include/opencv4 -lopencv_gapi -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_barcode -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cvv -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_mcc -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_shape -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_optflow -lopencv_surface_matching -lopencv_tracking -lopencv_highgui -lopencv_datasets -lopencv_text -lopencv_plot -lopencv_ml -lopencv_videostab -lopencv_videoio -lopencv_viz -lopencv_wechat_qrcode -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_dnn -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_imgproc -lopencv_core  -pthread -s  /usr/local/lib/libMNN.so
+```
+
 ![output image](https://qengineering.eu/images/SDcard16GB_tiny.jpg) Find this example on our [SD-image](https://github.com/Qengineering/RPi-image)
 # Super fast face detection at 80 FPS on bare Raspberry Pi 4.
 
@@ -42,10 +50,10 @@ $ mkdir *MyDir* <br/>
 $ cd *MyDir* <br/>
 $ wget https://github.com/Qengineering/Face-detection-Raspberry-Pi-32-64-bits/archive/refs/heads/master.zip <br/>
 $ unzip -j master.zip <br/>
-Remove master.zip and README.md as they are no longer needed. <br/> 
+Remove master.zip and README.md as they are no longer needed. <br/>
 $ rm master.zip <br/>
 $ rm README.md <br/> <br/>
-Your *MyDir/MNN* folder must now look like this: <br/> 
+Your *MyDir/MNN* folder must now look like this: <br/>
 Walk2.mp4 (demo video)<br/>
 FaceDetection.cpb (code::blocks project file)<br/>
 main.cpp (main example file)<br/>
@@ -61,17 +69,16 @@ The RFB-320 model recognizes slightly more faces than slim_320 at the expense of
 See the video at https://youtu.be/DERA83C9K2A
 
 ### RFB-320<br/>
-![output image](https://qengineering.eu/images/ResultSelfie-RFB.jpg) 
+![output image](https://qengineering.eu/images/ResultSelfie-RFB.jpg)
 ### RFB-320-quant-ADMM-32 (int8 ADMM quantified)<br/>
-![output image](https://qengineering.eu/images/ResultSelfie-RFB-quant-ADMM-32.jpg) 
+![output image](https://qengineering.eu/images/ResultSelfie-RFB-quant-ADMM-32.jpg)
 ### RFB-320-quant-KL-5792 (int8 KL quantified)<br/>
-![output image](https://qengineering.eu/images/ResultSelfie-RFB-quant-KL-5792.jpg) 
+![output image](https://qengineering.eu/images/ResultSelfie-RFB-quant-KL-5792.jpg)
 ### slim_320<br/>
-![output image](https://qengineering.eu/images/ResultSelfie-slim.jpg) 
+![output image](https://qengineering.eu/images/ResultSelfie-slim.jpg)
 ### slim_320-quant-ADMM-50 (int8 ADMM quantified)<br/>
-![output image](https://qengineering.eu/images/ResultSelfie-slim-quant-ADMM.jpg) 
+![output image](https://qengineering.eu/images/ResultSelfie-slim-quant-ADMM.jpg)
 
 ------------
 
-[![paypal](https://qengineering.eu/images/TipJarSmall4.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CPZTM5BB3FCYL) 
-
+[![paypal](https://qengineering.eu/images/TipJarSmall4.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CPZTM5BB3FCYL)
