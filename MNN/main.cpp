@@ -16,6 +16,9 @@ int main(int argc, char **argv) {
     }
     cout << "Start grabbing, press ESC on Live window to terminate" << endl;
 
+    cv::namedWindow("win", cv::WINDOW_NORMAL);
+    cv::setWindowProperty("win", cv::WND_PROP_FULLSCREEN, cv::WINDOW_FULLSCREEN);
+
     while(1){
 //        frame=cv::imread("27.jpg");  //if you want to run just one picture need to refresh frame before class detection
         cap >> frame;
@@ -34,9 +37,7 @@ int main(int argc, char **argv) {
         }
 
         //show output
-        cv::imshow("Name", frame);
-        cv::namedWindow("Name", cv::WINDOW_NORMAL);
-        cv::setWindowProperty("Name", cv::WND_PROP_FULLSCREEN, cv::WINDOW_FULLSCREEN);
+        cv::imshow("win", frame);
         char esc = cv::waitKey(5);
         if(esc == 27) break;
     }
