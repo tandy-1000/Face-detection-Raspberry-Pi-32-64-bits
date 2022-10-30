@@ -7,16 +7,16 @@ using namespace std;
 int main(int argc, char **argv) {
     cv::Mat frame;
 
-    UltraFace ultraface("slim-320-quant-ADMM-50.mnn", 320, 240, 4, 0.65); // config model input
+    UltraFace ultraface("RFB-320-quant-ADMM-32.mnn", 320, 240, 4, 0.25); // config model input
 
     cv::VideoCapture cap(0);
     if (!cap.isOpened()) {
         cerr << "ERROR: Unable to open the camera" << endl;
         return 0;
     }
-    cap.set(cv::CAP_PROP_FRAME_WIDTH, 1920);
-    cap.set(cv::CAP_PROP_FRAME_HEIGHT, 1080);
-    cap.set(cv::CAP_PROP_FPS, 30);
+    cap.set(cv::CAP_PROP_FRAME_WIDTH, 1280);
+    cap.set(cv::CAP_PROP_FRAME_HEIGHT, 720);
+    cap.set(cv::CAP_PROP_FPS, 60);
     cout << "Start grabbing, press ESC on Live window to terminate" << endl;
 
     cv::namedWindow("win", cv::WINDOW_NORMAL);
