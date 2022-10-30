@@ -16,6 +16,7 @@ int main(int argc, char **argv) {
     }
     cap.set(cv::CAP_PROP_FRAME_WIDTH, 1920);
     cap.set(cv::CAP_PROP_FRAME_HEIGHT, 1080);
+    cap.set(cv::CAP_PROP_FPS, 30);
     cout << "Start grabbing, press ESC on Live window to terminate" << endl;
 
     cv::namedWindow("win", cv::WINDOW_NORMAL);
