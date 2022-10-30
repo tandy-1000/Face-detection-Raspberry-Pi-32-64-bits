@@ -39,6 +39,7 @@ int main(int argc, char **argv) {
         }
 
         //show output
+        cv::resize(frame, frame, cv::Size(720, 576));
         cv::imshow("win", frame);
         char esc = cv::waitKey(5);
         if(esc == 27) break;
