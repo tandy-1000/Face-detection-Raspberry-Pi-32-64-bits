@@ -7,7 +7,7 @@ using namespace std;
 int main(int argc, char **argv) {
     cv::Mat frame;
 
-    UltraFace ultraface("RFB-320-quant-ADMM-32.mnn", 320, 240, 4, 0.25); // config model input
+    UltraFace ultraface("~/Face-detection-Raspberry-Pi-32-64-bits/MNN/RFB-320-quant-ADMM-32.mnn", 320, 240, 4, 0.25); // config model input
 
     cv::VideoCapture cap(0);
     if (!cap.isOpened()) {
